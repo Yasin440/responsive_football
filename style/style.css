@@ -1,7 +1,11 @@
-/* font are here */
+/* -----------------------------
+        font are here 
+-----------------------------*/
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
 
-/* common style are here */
+/* --------------------------
+    common style are here 
+-----------------------------*/
 
 body{
     font-family: 'Roboto', sans-serif;
@@ -11,7 +15,9 @@ main{
     display: flex;
     flex-direction: column;
 }
-/* banner style are here */
+/* -----------------------------
+    banner style are here 
+-----------------------------*/
 
 .header-banner{
     background-color: #2D25A0;
@@ -32,6 +38,11 @@ main{
     font-size: 64px;
     line-height: 80px;
     color: #FFFFFF;
+    transition: .5s;
+}
+.banner .banner-title:hover{
+    line-height: 75px;
+    margin-left: 40px;
 }
 .banner-info button{
     padding: 10px 24px;
@@ -41,17 +52,27 @@ main{
     color: white;
     border: none;
     margin-left: 40px;
+    transition: 1s;
 }
 .banner-info button:hover{
     background: #3DBAFD;
-    transition: 1s;
+    color: #2D25A0;
+    font-weight: bold;
+    border-radius: 5px;
 }
 .banner-img img{
     width: 556.01px;
     height: 438px;
+    cursor: pointer;
+    transition: .5s;
+}
+.banner-img img:hover{
+    transform: skew(-5deg, 5deg);
 }
 
-/* all players css here */
+/*-----------------------------
+     all players css here 
+-----------------------------*/
 
 .players{
     display: grid;
@@ -80,10 +101,13 @@ main{
     width: 300px;
     height: 256px;
     transition: .5s;
+    opacity: .85;
+    cursor: pointer;
 }
 
 .player-img:hover img{
     transform: scale(1.1);
+    opacity: 1;
 }
 .player-img {
     overflow: hidden;
@@ -108,7 +132,77 @@ main{
     color: #6C6C6C;
 }
 
-/* footer css style here */
+/* -----------------------------
+    news feed style are here 
+-----------------------------*/
+
+.news-feed{
+    background: #3dbafd1f;
+    margin-bottom: 40px;
+    padding: 80px 0;
+}
+.news-feed h1{
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 64px;
+    line-height: 80px;
+    color: #2D25A0;
+    text-align: center;
+    margin-top: 0;
+}
+.all-news{
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-row-gap: 60px;
+}
+.news{
+    display: flex;
+    flex-direction: row;
+    height: 413px;
+    width: 620px;
+    margin: 0 auto;
+}
+.news img{
+    width: 615px;
+    height: 400px;
+    position: absolute;
+    box-shadow: -10px 10px 15px #7d7d7de0;
+    z-index: 1;
+    cursor: pointer;
+    transition: 1s;
+}
+.single-news:hover img{
+    transform: translate(-49%, 0);
+}
+.news p{
+    width: 565px;
+    height: 370px;
+    font-size: 20px;
+    text-align: justify;
+    position: relative;
+    z-index: 0;
+    transition: 1s;
+    border-left: 7px solid;
+    border-image: linear-gradient(blue, cyan);
+    border-image-slice: 1;
+    margin: 0;
+    padding: 15px;
+    align-items: center;
+    display: flex;
+}
+.news .brazil{
+    border-image: linear-gradient(#065DFF,#ffff26);
+    border-image-slice: 1;
+    border-left: 7px solid;
+}
+.single-news:hover p{
+    transform: translate(60%, 0);
+}
+
+/* -----------------------------
+    footer css style here 
+-----------------------------*/
 
 footer{
     margin: 88px 0;
@@ -137,11 +231,16 @@ footer{
     line-height: 24px;
 }
 
-/* responsive css style are here */
+
+/* -----------------------------
+responsive css style are here 
+-----------------------------*/
 
 @media only screen and (max-width: 688px){
 
-    /* for header part responsive */
+    /*-----------------------------
+     for header part responsive 
+     -----------------------------*/
 
     .banner .banner-title{
         width: 278px;
@@ -170,7 +269,9 @@ footer{
         height: 535px;
     }
 
-    /* for players part responsive */
+    /*-----------------------------
+     for players part responsive 
+     -----------------------------*/
 
     .players{
         display: flex;
@@ -179,7 +280,62 @@ footer{
         width: 100%;
     }
 
-    /* footer part responsive */
+    /*----------------------------- 
+        news part responsive
+    ----------------------------- */
+
+    .news-feed h1{
+        /* font-family: Poppins;
+        font-style: normal;
+        font-weight: bold; */
+        font-size: 36px;
+        line-height: 30px;
+        /* color: #2D25A0;
+        text-align: center;
+        margin-top: 0; */
+    }
+    .news img{
+        width: 360px;
+        height: 296px;
+        /* position: absolute; */
+        box-shadow: -10px 10px 15px #7d7d7de0;
+        /* z-index: 1; */
+        cursor: pointer;
+        /* transition: 1s; */
+    }
+    .news p{
+    width: 350px;
+    font-size: 15px;
+    text-align: justify;
+    /* position: relative; */
+    /* bottom: 10px; */
+    /* z-index: 0;
+    transition: 1s; */
+    border-left: 0;
+    border-top: 5px solid;
+    border-image: linear-gradient(blue, cyan);
+    border-image-slice: 1;
+    margin: 0;
+    padding: 5px;
+    /* overflow: hidden; */
+    }
+    .news .brazil{
+        border-image: linear-gradient(#065DFF,#ffff26);
+        border-image-slice: 1;
+        border-top: 5px solid;
+        border-left: 0;
+    }
+    .single-news:hover img{
+        transform: translate(0);
+    }
+    .single-news:hover p{
+        transform: translate(0);
+    }
+
+
+    /*----------------------------- 
+        footer part responsive
+    ----------------------------- */
 
     .full-footer{
         width: 300px;
