@@ -66,6 +66,7 @@ main{
     cursor: pointer;
     transition: .5s;
 }
+
 .banner-img img:hover{
     transform: skew(-5deg, 5deg);
 }
@@ -163,15 +164,6 @@ main{
     width: 620px;
     margin: 0 auto;
 }
-.news img{
-    width: 615px;
-    height: 400px;
-    position: absolute;
-    box-shadow: -10px 10px 15px #7d7d7de0;
-    z-index: 1;
-    cursor: pointer;
-    transition: 1s;
-}
 .single-news:hover img{
     transform: translate(-49%, 0);
 }
@@ -190,6 +182,15 @@ main{
     padding: 15px;
     align-items: center;
     display: flex;
+}
+.news img{
+    width: 615px;
+    height: 400px;
+    position: absolute;
+    box-shadow: -10px 10px 15px #7d7d7de0;
+    z-index: 1;
+    cursor: pointer;
+    transition: 1s;
 }
 .news .brazil{
     border-image: linear-gradient(#065DFF,#ffff26);
@@ -222,6 +223,11 @@ footer{
 .footer-social-icon img{
     height: 32px;
     width: 32px;
+    padding: 5px;
+    transition: .5s;
+}
+.footer-social-icon img:hover{
+    transform:translateY(-3px);
 }
 .copywrite p{
     font-family: Poppins;
@@ -242,6 +248,10 @@ responsive css style are here
      for header part responsive 
      -----------------------------*/
 
+     .banner .banner-title:hover{
+        line-height: 55px;
+        margin-left: 40px;
+    }
     .banner .banner-title{
         width: 278px;
         height: 138px;
@@ -284,46 +294,52 @@ responsive css style are here
         news part responsive
     ----------------------------- */
 
+    .news-feed{
+        background: #3dbafd1f;
+        padding: 40px 0;
+        height: 1400px;
+    }
+    .all-news{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-row-gap:270px;
+        
+    }
+    .news{
+        display: flex;
+        flex-direction: row;
+        height: 413px;
+        width: 620px;
+        margin: 0 auto;
+    }
     .news-feed h1{
-        /* font-family: Poppins;
-        font-style: normal;
-        font-weight: bold; */
         font-size: 36px;
         line-height: 30px;
-        /* color: #2D25A0;
-        text-align: center;
-        margin-top: 0; */
-    }
-    .news img{
-        width: 360px;
-        height: 296px;
-        /* position: absolute; */
-        box-shadow: -10px 10px 15px #7d7d7de0;
-        /* z-index: 1; */
-        cursor: pointer;
-        /* transition: 1s; */
     }
     .news p{
     width: 350px;
+    height: 312px;
     font-size: 15px;
     text-align: justify;
-    /* position: relative; */
-    /* bottom: 10px; */
-    /* z-index: 0;
-    transition: 1s; */
+    position: relative;
+    top: 80%;
+    align-items: unset;
+    display: flex;
+    flex-direction: column;
+    bottom: 20px;
     border-left: 0;
-    border-top: 5px solid;
+    margin: 0;
+    padding: 0 5px;
+    border-left: 7px solid;
     border-image: linear-gradient(blue, cyan);
     border-image-slice: 1;
-    margin: 0;
-    padding: 5px;
-    /* overflow: hidden; */
     }
-    .news .brazil{
-        border-image: linear-gradient(#065DFF,#ffff26);
-        border-image-slice: 1;
-        border-top: 5px solid;
-        border-left: 0;
+    .news img{
+        width: 100%;
+        height: 296px;
+        box-shadow: -10px 10px 15px #7d7d7de0;
+        cursor: pointer;
+        position: absolute;
     }
     .single-news:hover img{
         transform: translate(0);
@@ -339,7 +355,7 @@ responsive css style are here
 
     .full-footer{
         width: 300px;
-        height: 180px;
+        height: 150px;
     }
     .footer-logo img{
         width: 100%;
@@ -349,5 +365,6 @@ responsive css style are here
         height: 30px;
         width: 30px;
     }
+
 
 }
